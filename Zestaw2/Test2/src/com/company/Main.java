@@ -8,17 +8,18 @@ public class Main {
     public static void main(String[] args) {
 
 
-        int[] tab = new int[8];
+        Scanner scanner = new Scanner(System.in);
+        int[] tab = new int[9];
 
-        for (int j = tab.length-1; j >=0; j++) {
-            Scanner scanner = new Scanner(System.in);
-            i = scanner.nextInt();
-            i++;
-            System.out.println(i);
+        for (int i = 1; i < tab.length; i++) {
 
-            if (i == i+1){
-                System.out.println("dupa");
+            tab[i] = scanner.nextInt();
+
+            if (tab[i] == tab[i-1]){
+                System.out.println(tab[i]);
+                return;
             }
+            System.out.println(tab[i]);
         }
     }
 }
